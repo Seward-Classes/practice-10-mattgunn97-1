@@ -1,4 +1,22 @@
-//AI Disclaimer:
+//AI Disclaimer: Moderate AI use.
+//Main code was my own, Claude used to ensure proper syntax and to help with any debugging.
+
+/*Submission Checklist
+
+    [X] AI usage disclosure at top of main.cpp
+    [X] All files at repository root
+    [X] Base Shape class with pure virtual getArea()
+    [X] Two derived classes (Rectangle and Circle) with proper area calculations
+    [X] Read and parse shapes.txt
+    [X] Use std::vector<std::unique_ptr<Shape>> for polymorphism
+    [X] Use std::make_unique<Shape>() for all object creation
+    [X] Display all shapes and their areas using getArea()
+    [X] No manual memory management (no delete)
+    [X] Error handling with line numbers for bad file data
+    [X] Tested with sample data and bad data
+    [X] Compiles and runs without memory leaks
+    [X] Committed and pushed to GitHub
+*/
 
 /*--------------------------------------------------------------------------------*/
 
@@ -18,6 +36,7 @@ void printAllAreas(const std::vector<std::unique_ptr<Shape>>& shapes) {
     for (const auto& shape : shapes) {
         shape->display();
         std::cout << "Area: " << std::fixed << std::setprecision(4) << shape->getArea() << "\n\n";
+        std::cout << std::defaultfloat;
     }
 }
 
